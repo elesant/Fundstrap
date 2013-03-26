@@ -1,4 +1,4 @@
 Fundstrap
 =========
 
-We help match campus clubs with sponsors.
+We match organizations with sponsors.
