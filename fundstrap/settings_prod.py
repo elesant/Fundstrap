@@ -2,7 +2,13 @@ from settings_base import *
 
 ENVIRONMENT = 'PROD'
 
-ALLOWED_HOSTS = ['fundstrap.herokuapp.com', 'fundstrap.com', 'fund-strap.com']
+ALLOWED_HOSTS = [
+	'fundstrap.herokuapp.com',
+	'fundstrap.com',
+	'fund-strap.com',
+	'www.fundstrap.com',
+	'www.fund-strap.com'
+]
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
