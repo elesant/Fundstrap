@@ -1,3 +1,5 @@
+{% load compress %}
+
 <!DOCTYPE html>
 <html lang="en" ng-app>
 <head>
@@ -11,13 +13,19 @@
   <meta name="keywords" content="">
   <meta name="author" content="">
 
+  {% compress css %}
   <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
   <link href="{{ STATIC_URL }}css/glyphicons.css" rel="stylesheet">
   <link href="{{ STATIC_URL }}css/fundstrap.css" rel="stylesheet">
+  {% endcompress %}
 
+  {% compress js %}
   <script src="{{ STATIC_URL }}js/jquery.js"></script>
   <script src="{{ STATIC_URL }}js/angular.js"></script>
+  {% endcompress %}
+  {% compress js %}
   <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+  {% endcompress %}
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="http://font-service.herokuapp.com/glyphicons-regular.css" rel="stylesheet" type="text/css">
