@@ -1,5 +1,6 @@
 from django.contrib import admin
 from core.models import FSUser
+from django.contrib.sessions.models import Session
 
 
 class FSUserAdmin(admin.ModelAdmin):
@@ -24,3 +25,4 @@ class FSUserAdmin(admin.ModelAdmin):
 
 
 admin.site.register(FSUser, FSUserAdmin)
+admin.site.register(Session)

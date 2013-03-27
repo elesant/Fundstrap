@@ -6,6 +6,9 @@ import dj_database_url
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+PROJECT_DIR = PROJECT_ROOT.split(os.sep)[-1]
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -69,9 +72,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'assets'),
 )
 
 # List of finder classes that know how to find static files in
@@ -100,15 +101,17 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'fundstrap.urls'
+ROOT_URLCONF = '%s.urls' % PROJECT_DIR
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'fundstrap.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_ROOT, 'templates'),
+)
+
+FIXTURE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'fixtures'),
 )
 
 INSTALLED_APPS = (
@@ -154,3 +157,5 @@ LOGGING = {
 }
 
 AUTH_USER_MODEL = 'core.FSUser'
+
+COMMANDS_ROOT = os.path.join(PROJECT_ROOT, '../core/management/commands/'),
