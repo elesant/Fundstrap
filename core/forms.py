@@ -46,4 +46,3 @@ class UserRegisterForm(StandardForm):
             if password != password_conf:
                 raise forms.ValidationError('Passwords do not match.')
             return password
- 

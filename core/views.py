@@ -12,8 +12,6 @@ def api_user_register(request):
     benchmark_start = time.time()
     response = prepare_response(request)
     status = 200
-    email = request.POST['email']
-    password = request.POST['password']
     form = UserRegisterForm(request.POST)
     errors = get_validation_errors(form)
     if form.is_valid():
