@@ -2,6 +2,8 @@ from settings_base import *
 
 ENVIRONMENT = 'PROD'
 
+ALLOWED_HOSTS = ['fundstrap.herokuapp.com', 'fundstrap.com', 'fund-strap.com']
+
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 DAJAXICE_DEBUG = DEBUG
