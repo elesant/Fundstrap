@@ -132,7 +132,7 @@ LOGGING = {
 
 AUTH_USER_MODEL = 'core.FSUser'
 
-AWS_ACCESS_KEY_ID = 'AKIAIWUXQY7UILQNXKDA'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAIWUXQY7UILQNXKDAasfdafdsfsdaf'
+AWS_SECRET_ACCESS_KEY = 'Mf/DGgaXrePLNS4M3bmBqLv9shUz/xH71PqqI4s9asdfsdafsadfsdafasdf'
 
 COMMANDS_ROOT = os.path.join(PROJECT_ROOT, '../core/management/commands/'),
